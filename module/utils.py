@@ -83,3 +83,6 @@ def do_with_timeout(function, args = [], kwargs = {}, time_beteween: float = 0.5
 
 def now():
     return time.time()
+
+def switch_tab():
+  return pyautogui.hotkey('ctrl', 'tab')

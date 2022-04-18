@@ -14,7 +14,7 @@ def get_windows():
 def _get_linux_bombcrypto_windows():
     stdout = (
         subprocess.Popen(
-            "xdotool search --name bombcrypto", shell=True, stdout=subprocess.PIPE
+            "xdotool search --name Bombcrypto", shell=True, stdout=subprocess.PIPE
         )
         .communicate()[0]
         .decode("utf-8")
@@ -26,7 +26,7 @@ def _get_linux_bombcrypto_windows():
 def _get_bombcrypto_windows():
     import pygetwindow
 
-    return [DefaultWindow(w) for w in pygetwindow.getWindowsWithTitle("bombcrypto")]
+    return [DefaultWindow(w) for w in pygetwindow.getWindowsWithTitle("Bombcrypto")]
 
 class LinuxWindow:
     def __init__(self, window_id) -> None:
