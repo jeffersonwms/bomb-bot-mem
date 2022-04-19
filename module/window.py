@@ -20,7 +20,8 @@ def _get_linux_bombcrypto_windows():
         .decode("utf-8")
         .strip()
     )
-    windows = stdout.split("\n")
+    if len(stdout) > 0:
+        windows = stdout.split("\n")
     return [LinuxWindow(w) for w in windows]
 
 def _get_bombcrypto_windows():
